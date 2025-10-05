@@ -1,4 +1,3 @@
-1. Nombre y tipo de local
 Nombre: Aromanía
 Tipo de local: Espacio de aromaterapia, decoración y bienestar
 Ubicación: Galerías Pacífico – Ciudad Autónoma de Buenos Aires
