@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aromanía · Galería</title>
+
+  <!-- Tipografías Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Vinculamos el CSS externo -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- ====== Header / Nav ====== -->
+  <header>
+    <div class="container nav">
+      <a href="#inicio" class="brand" aria-label="Inicio - Aromanía">
+        <svg viewBox="0 0 64 64" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#1e88e5"/>
+              <stop offset="100%" stop-color="#f59e0b"/>
+            </linearGradient>
+          </defs>
+          <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#g)"/>
+          <path d="M32 16 C36 22,36 30,32 36 C28 30,28 22,32 16 Z" fill="#0b1220"/>
+          <path d="M22 24 C26 24,28 28,29 33 C24 32,21 29,22 24 Z" fill="#0b1220"/>
+          <path d="M42 24 C38 24,36 28,35 33 C40 32,43 29,42 24 Z" fill="#0b1220"/>
+          <path d="M26 36 C24 33,26 30,30 30 C29 33,28 35,26 36 Z" fill="#0b1220"/>
+          <path d="M38 36 C40 33,38 30,34 30 C35 33,36 35,38 36 Z" fill="#0b1220"/>
+          <path d="M20 40 C28 38,36 38,44 40 C36 42,28 42,20 40 Z" fill="#0b1220"/>
+        </svg>
+        <span>Aromanía</span>
+      </a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====== Hero ====== -->
+    <section id="inicio" class="hero section">
+      <div class="container wrap">
+        <div class="copy">
+          <h1 class="title title-xl hero-title">Aromanía: Tu rincón de fragancias y relax</h1>
+          <p class="lead">Un local chiquito pero <em>muy</em> atractivo, especializado en <strong>aromas</strong>, <strong>decoración</strong> y <strong>regalitos</strong> que despiertan los sentidos. En la galería destacamos por los <em>colores</em>, los <em>olores</em> y la <em>buena onda</em>. Pasá a conocernos o hacé tu pedido por WhatsApp.</p>
+          <p class="quote">“Respirá profundo, soltá el día: la armonía está en los detalles.”</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#productos">Ver productos</a>
+            <a class="btn btn-ghost" href="#contacto">Cómo llegar</a>
+          </div>
+          <div class="badge">Abierto Lun–Sáb • 10 a 20 hs</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Nosotros ====== -->
+    <section id="nosotros" class="section">
+      <div class="container">
+        <div class="grid-2">
+          <div>
+            <span class="eyebrow">Nosotros</span>
+            <h2 class="title title-lg" style="margin-top:.4rem;">Hecho con calma, curado con amor</h2>
+            <p class="lead" style="margin-top:.6rem;">Desde 2021, <strong>Aromanía</strong> es ese rincón que invita a bajar un cambio: velas y difusores seleccionados, sahumerios con buenos porta-sahumerios, aceites esenciales de calidad y pequeños detalles de deco. Nos mueve la <em>curaduría</em>, los <em>aromas limpios</em> y el <em>buen precio</em>.</p>
+            <ul class="list" style="margin-top:1rem;">
+              <li>✔ Atención cercana y recomendaciones honestas</li>
+              <li>✔ Stock rotativo con novedades semanales</li>
+              <li>✔ Retiro en el acto dentro de la galería</li>
+            </ul>
+          </div>
+          <div class="card">
+            <img src="img/inicio.jpg" alt="Detalle de productos de aromaterapia y deco" class="media"/>
+            <div class="body">
+              <h3>Nuestra esencia</h3>
+              <p>Somos un equipo chico y detallista. Probamos cada aroma y elegimos proveedores con foco en calidad. Queremos que cada visita te deje un <em>mood</em> mejor que cuando llegaste.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Productos ====== -->
+    <section id="productos" class="hero section" aria-labelledby="t-prod">
+      <div class="container">
+        <span class="eyebrow">Catálogo</span>
+        <h2 id="t-prod" class="title title-lg" style="margin-top:.4rem;">Productos destacados</h2>
+        <p class="lead" style="margin-top:.4rem;">Actualizamos el stock cada semana. Algunos imperdibles:</p>
+
+        <div class="cards" style="margin-top:1rem;">
+          <article class="card"><img src="img/velas.jpg" alt="Velas" class="media"/><div class="body"><h3>Velas aromáticas artesanales</h3><p>Cera de soja/mixta, mecha de algodón y fragancias equilibradas...</p></div></article>
+          <article class="card"><img src="img/sahumerios.jpg" alt="Sahumerios" class="media"/><div class="body"><h3>Sahumerios y porta-sahumerios</h3><p>Varitas y conos de diferentes notas (sándalo, palo santo, jazmín)...</p></div></article>
+          <article class="card"><img src="img/difusor.jpg" alt="Difusores" class="media"/><div class="body"><h3>Difusores de ambientes</h3><p>Con varillas de rattan o eléctricos ultrasónicos...</p></div></article>
+          <article class="card"><img src="img/aceite.jpg" alt="Aceites" class="media"/><div class="body"><h3>Aceites esenciales</h3><p>Notas puras para difusores o mezclas de masaje...</p></div></article>
+          <article class="card"><img src="img/sales.jpg" alt="Sales" class="media"/><div class="body"><h3>Sales de baño y jabones naturales</h3><p>Fórmulas suaves con aceites vegetales y exfoliantes...</p></div></article>
+          <article class="card"><img src="img/regalo.jpg" alt="Kits de regalo" class="media"/><div class="body"><h3>Mini kits de regalo</h3><p>Combos listos para sorprender: vela + sahumerios, difusor + aceite...</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Contacto ====== -->
+    <section id="contacto" class="section" aria-labelledby="t-contacto">
+      <div class="container">
+        <span class="eyebrow">Ubicación y contacto</span>
+        <h2 id="t-contacto" class="title title-lg" style="margin-top:.4rem;">Encontranos en Galerías Pacífico</h2>
+
+        <div class="contact" style="margin-top:1rem;">
+          <div class="panel">
+            <h3 class="title" style="font-size:1.2rem;">Datos</h3>
+            <ul class="list">
+              <li><strong>Dirección:</strong> Av. Córdoba 550, C1054, CABA (Galerías Pacífico)</li>
+              <li><strong>Horario:</strong> Lun–Sáb 10 a 20 hs</li>
+              <li><strong>Mail:</strong> <a href="mailto:hola@aromania.com">hola@aromania.com</a></li>
+              <li><strong>Instagram:</strong> <a href="#">@aromania.galeria</a></li>
+              <li><strong>Facebook:</strong> <a href="#">/aromania</a></li>
+            </ul>
+            <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+              <a class="btn btn-primary" href="javascript:void(0)">WhatsApp</a>
+              <a class="btn btn-ghost" href="#productos">Ver catálogo</a>
+            </div>
+          </div>
+
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=Galer%C3%ADas%20Pac%C3%ADfico%2C%20Av.%20C%C3%B3rdoba%20550%2C%20C1054%20CABA&output=embed" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <p>© <span id="year"></span> Aromanía · Galerías Pacífico</p>
+      <p><a href="#inicio">Volver arriba ↑</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
