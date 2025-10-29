@@ -24,14 +24,12 @@
         </svg>
         <span>Aromanía</span>
       </a>
-      <!-- Botón hamburguesa móvil -->
-      <button id="mobileToggle" class="mobile-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">☰</button>
-      <nav class="menu" aria-label="Navegación principal">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Nosotros</a>
-        <a href="productos.html">Productos</a>
+      <nav class="menu">
+        <a href="index.html#inicio">Inicio</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="index.html#productos">Productos</a>
         <a href="promociones.html">Promociones</a>
-        <a href="contacto.html">Contacto</a>
+        <a href="index.html#contacto">Contacto</a>
       </nav>
     </div>
   </header>
@@ -41,10 +39,10 @@
     <section class="section">
       <div class="container">
         <span class="eyebrow">Exclusivo Aromanía</span>
-  <h2 class="title title-lg mt-0-5">Promociones de Temporada</h2>
-  <p class="lead mt-0-4">Aprovechá nuestras ofertas pensadas para llenar tu espacio de buena energía sin vaciar el bolsillo.</p>
+        <h2 class="title title-lg" style="margin-top:.5rem;">Promociones de Temporada</h2>
+        <p class="lead" style="margin-top:.4rem;">Aprovechá nuestras ofertas pensadas para llenar tu espacio de buena energía sin vaciar el bolsillo.</p>
 
-  <div class="cards mt-1-5">
+        <div class="cards" style="margin-top:1.5rem;">
           <article class="card"><div class="body">
             <h3>✨ Ritual Relax</h3>
             <p>Llevate un <strong>producto de aromaterapia</strong> y obtené un <strong>40% OFF</strong> en el segundo artículo de menor precio.</p>
@@ -64,15 +62,15 @@
     </section>
 
     <!-- ====== Calculadora ====== -->
-    <section class="section section--bordered-center">
-      <div class="container container--narrow">
+    <section class="section" style="border-top:1px solid rgba(255,255,255,.06); text-align:center;">
+      <div class="container" style="max-width:950px;">
         <h2 class="title title-lg">Calculá tu ahorro</h2>
-        <p class="lead mt-0-4">Seleccioná tus productos y descubrí cuánto podés ahorrar.</p>
+        <p class="lead" style="margin-top:.4rem;">Seleccioná tus productos y descubrí cuánto podés ahorrar.</p>
 
-        <form id="promocionesForm" class="panel form-panel">
-          <div class="form-row-center">
+        <form id="promocionesForm" class="panel" style="margin-top:1.5rem; background:var(--card); border-radius:var(--radius); padding:2rem; box-shadow:var(--shadow); text-align:left;">
+          <div style="margin-bottom:1rem; text-align:center;">
             <label for="tipoPromo"><strong>Tipo de promoción:</strong></label><br>
-            <select id="tipoPromo" class="form-control select--promo">
+            <select id="tipoPromo" class="form-control" style="margin-top:.5rem; padding:.6rem; border-radius:8px; width:100%; max-width:420px;">
               <option value="">-- Elegí una promoción --</option>
               <option value="ritual">Ritual Relax (40% OFF en segundo producto)</option>
               <option value="duo">Dúo Aromático (3x2 en similares)</option>
@@ -81,100 +79,96 @@
           </div>
 
           <!-- Productos (6) -->
-          <div id="productosContainer" class="productos-grid">
+          <div id="productosContainer" style="display:grid; gap:1rem; margin-top:1.5rem;">
 
             <!-- 1 Velas -->
-            <div class="producto-item">
+            <div class="producto-item" style="display:flex; justify-content:space-between; align-items:center; background:#10182b; padding:1rem; border-radius:10px;">
               <label>
                 <input type="checkbox" class="producto-checkbox" value="velas" data-precio="9800" data-nombre="Velas aromáticas"> Velas aromáticas ($9.800)
               </label>
-              <div class="cantidad-wrapper">
+              <div class="cantidad-wrapper" style="display:flex; align-items:center; gap:.3rem;">
                 <button type="button" class="btn-cantidad" data-target="cant-velas" data-action="minus">−</button>
-                <input type="number" id="cant-velas" class="cantidad-input" min="0" value="0" disabled>
+                <input type="number" id="cant-velas" class="cantidad-input" min="0" value="0" disabled
+                  style="width:72px; text-align:center; padding:.45rem; border-radius:8px; border:1px solid #2a3550; background:#0f172a; color:var(--text);">
                 <button type="button" class="btn-cantidad" data-target="cant-velas" data-action="plus">+</button>
               </div>
             </div>
 
             <!-- 2 Sahumerios -->
-            <div class="producto-item">
+            <div class="producto-item" style="display:flex; justify-content:space-between; align-items:center; background:#10182b; padding:1rem; border-radius:10px;">
               <label>
                 <input type="checkbox" class="producto-checkbox" value="sahumerios" data-precio="4200" data-nombre="Sahumerios y porta-sahumerios"> Sahumerios y porta-sahumerios ($4.200)
               </label>
-              <div class="cantidad-wrapper">
+              <div class="cantidad-wrapper" style="display:flex; align-items:center; gap:.3rem;">
                 <button type="button" class="btn-cantidad" data-target="cant-sahumerios" data-action="minus">−</button>
-                <input type="number" id="cant-sahumerios" class="cantidad-input" min="0" value="0" disabled>
+                <input type="number" id="cant-sahumerios" class="cantidad-input" min="0" value="0" disabled
+                  style="width:72px; text-align:center; padding:.45rem; border-radius:8px; border:1px solid #2a3550; background:#0f172a; color:var(--text);">
                 <button type="button" class="btn-cantidad" data-target="cant-sahumerios" data-action="plus">+</button>
               </div>
             </div>
 
             <!-- 3 Difusores -->
-            <div class="producto-item">
+            <div class="producto-item" style="display:flex; justify-content:space-between; align-items:center; background:#10182b; padding:1rem; border-radius:10px;">
               <label>
                 <input type="checkbox" class="producto-checkbox" value="difusores" data-precio="12900" data-nombre="Difusores de ambiente"> Difusores de ambiente ($12.900)
               </label>
-              <div class="cantidad-wrapper">
+              <div class="cantidad-wrapper" style="display:flex; align-items:center; gap:.3rem;">
                 <button type="button" class="btn-cantidad" data-target="cant-difusores" data-action="minus">−</button>
-                <input type="number" id="cant-difusores" class="cantidad-input" min="0" value="0" disabled>
+                <input type="number" id="cant-difusores" class="cantidad-input" min="0" value="0" disabled
+                  style="width:72px; text-align:center; padding:.45rem; border-radius:8px; border:1px solid #2a3550; background:#0f172a; color:var(--text);">
                 <button type="button" class="btn-cantidad" data-target="cant-difusores" data-action="plus">+</button>
               </div>
             </div>
 
             <!-- 4 Aceites -->
-            <div class="producto-item">
+            <div class="producto-item" style="display:flex; justify-content:space-between; align-items:center; background:#10182b; padding:1rem; border-radius:10px;">
               <label>
                 <input type="checkbox" class="producto-checkbox" value="aceites" data-precio="10500" data-nombre="Aceites esenciales"> Aceites esenciales ($10.500)
               </label>
-              <div class="cantidad-wrapper">
+              <div class="cantidad-wrapper" style="display:flex; align-items:center; gap:.3rem;">
                 <button type="button" class="btn-cantidad" data-target="cant-aceites" data-action="minus">−</button>
-                <input type="number" id="cant-aceites" class="cantidad-input" min="0" value="0" disabled>
+                <input type="number" id="cant-aceites" class="cantidad-input" min="0" value="0" disabled
+                  style="width:72px; text-align:center; padding:.45rem; border-radius:8px; border:1px solid #2a3550; background:#0f172a; color:var(--text);">
                 <button type="button" class="btn-cantidad" data-target="cant-aceites" data-action="plus">+</button>
               </div>
             </div>
 
             <!-- 5 Jabones / Sales -->
-            <div class="producto-item">
+            <div class="producto-item" style="display:flex; justify-content:space-between; align-items:center; background:#10182b; padding:1rem; border-radius:10px;">
               <label>
                 <input type="checkbox" class="producto-checkbox" value="sales" data-precio="5800" data-nombre="Sales y jabones naturales"> Sales y jabones naturales ($5.800)
               </label>
-              <div class="cantidad-wrapper">
+              <div class="cantidad-wrapper" style="display:flex; align-items:center; gap:.3rem;">
                 <button type="button" class="btn-cantidad" data-target="cant-sales" data-action="minus">−</button>
-                <input type="number" id="cant-sales" class="cantidad-input" min="0" value="0" disabled>
+                <input type="number" id="cant-sales" class="cantidad-input" min="0" value="0" disabled
+                  style="width:72px; text-align:center; padding:.45rem; border-radius:8px; border:1px solid #2a3550; background:#0f172a; color:var(--text);">
                 <button type="button" class="btn-cantidad" data-target="cant-sales" data-action="plus">+</button>
               </div>
             </div>
 
             <!-- 6 Kits -->
-            <div class="producto-item">
+            <div class="producto-item" style="display:flex; justify-content:space-between; align-items:center; background:#10182b; padding:1rem; border-radius:10px;">
               <label>
                 <input type="checkbox" class="producto-checkbox" value="kits" data-precio="16900" data-nombre="Mini kits de regalo"> Mini kits de regalo ($16.900)
               </label>
-              <div class="cantidad-wrapper">
+              <div class="cantidad-wrapper" style="display:flex; align-items:center; gap:.3rem;">
                 <button type="button" class="btn-cantidad" data-target="cant-kits" data-action="minus">−</button>
-                <input type="number" id="cant-kits" class="cantidad-input" min="0" value="0" disabled>
+                <input type="number" id="cant-kits" class="cantidad-input" min="0" value="0" disabled
+                  style="width:72px; text-align:center; padding:.45rem; border-radius:8px; border:1px solid #2a3550; background:#0f172a; color:var(--text);">
                 <button type="button" class="btn-cantidad" data-target="cant-kits" data-action="plus">+</button>
               </div>
             </div>
 
           </div>
 
-          <div class="cta cta-center">
-            <button type="submit" class="btn btn-accent">Calcular ahorro</button>
+          <div class="cta" style="margin-top:2rem; display:flex; justify-content:center; gap:1rem;">
+            <button type="submit" class="btn" style="background:var(--accent); border:none; color:#0b1220;">Calcular ahorro</button>
             <button type="button" id="btnLimpiar" class="btn btn-ghost">Limpiar</button>
           </div>
         </form>
 
-        <!-- Resultados (inline) -->
-        <div id="resultados" class="panel result-panel"></div>
-
-        <!-- Modal resumen (se muestra al calcular) -->
-        <div id="modalResumen" class="modal" aria-hidden="true">
-          <div class="modal-overlay" data-close></div>
-          <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <button class="modal-close" aria-label="Cerrar" data-close>&times;</button>
-            <h3 id="modalTitle" class="title title-modal">🧾 Resumen de tu compra</h3>
-            <div id="modalBody"></div>
-          </div>
-        </div>
+        <!-- Resultados -->
+        <div id="resultados" class="panel" style="display:none; margin-top:1.5rem; background:var(--card); border-radius:var(--radius); padding:1.5rem; text-align:center;"></div>
       </div>
     </section>
   </main>
@@ -188,28 +182,6 @@
   <!-- ====== JS ====== -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-
-    // Toggle menú móvil en promociones.html
-    (function(){
-      const btn = document.getElementById('mobileToggle');
-      const menu = document.querySelector('nav.menu');
-      if (!btn || !menu) return;
-      btn.addEventListener('click', ()=>{
-        const open = menu.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open);
-      });
-      menu.addEventListener('click', (e)=>{
-        if (e.target.tagName === 'A' && menu.classList.contains('open')){
-          menu.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-        }
-      });
-      window.addEventListener('resize', ()=>{
-        if (window.innerWidth > 700 && menu.classList.contains('open')){
-          menu.classList.remove('open'); btn.setAttribute('aria-expanded','false');
-        }
-      });
-    })();
 
     // ========== Cantidades +/- (delegación) ==========
     document.addEventListener('click', (e) => {
@@ -250,7 +222,7 @@
           const input = document.getElementById('cant-' + cb.value);
           input.disabled = true; input.value = 0;
         });
-        resultadosDiv.classList.remove('open');
+        resultadosDiv.style.display = 'none';
         resultadosDiv.innerHTML = '';
       });
 
@@ -336,50 +308,20 @@
 
       function renderResultados(res, productos){
         const detalle = productos.map(p =>
-          `<p class="result-line">• ${p.nombre} x${p.cantidad} — $${formatear(p.precio*p.cantidad)}</p>`
+          `<p style="margin:.2rem 0; text-align:left;">• ${p.nombre} x${p.cantidad} — $${formatear(p.precio*p.cantidad)}</p>`
         ).join('');
 
-        // Mantener el resumen inline (para accesibilidad/backup)
         resultadosDiv.innerHTML = `
-          <h3 class="title title-modal">🧾 Resumen de tu compra</h3>
-          <div class="result-details">${detalle}</div>
-          <div class="hr--muted"></div>
+          <h3 class="title" style="font-size:1.3rem; margin-bottom:.8rem;">🧾 Resumen de tu compra</h3>
+          <div style="margin-bottom:1rem;">${detalle}</div>
+          <hr style="border:1px solid rgba(255,255,255,.08); margin:1rem 0;">
           <p><strong>Subtotal:</strong> $${formatear(res.subtotal)}</p>
           <p><strong>Descuento:</strong> -$${formatear(res.descuento)}</p>
-          <p class="result-total"><strong>Total:</strong> $${formatear(res.total)}</p>
-          <p class="promo-message">${res.mensaje}</p>
+          <p style="font-size:1.2rem; margin-top:.5rem;"><strong>Total:</strong> $${formatear(res.total)}</p>
+          <p style="margin-top:1rem; background:#183d2e; display:inline-block; padding:.6rem 1rem; border-radius:8px; color:#b9f6ca;">${res.mensaje}</p>
         `;
-        resultadosDiv.classList.add('open');
-
-        // También mostrar un modal centrado con el mismo resumen
-        const modal = document.getElementById('modalResumen');
-        const modalBody = document.getElementById('modalBody');
-        modalBody.innerHTML = `
-          <div class="result-details">${detalle}</div>
-          <div class="hr--muted"></div>
-          <p><strong>Subtotal:</strong> $${formatear(res.subtotal)}</p>
-          <p><strong>Descuento:</strong> -$${formatear(res.descuento)}</p>
-          <p class="result-total"><strong>Total:</strong> $${formatear(res.total)}</p>
-          <p class="promo-message">${res.mensaje}</p>
-        `;
-
-        modal.setAttribute('aria-hidden', 'false');
-        modal.classList.add('open');
-
-        // Scroll al resultado inline pero el modal toma foco
+        resultadosDiv.style.display = 'block';
         resultadosDiv.scrollIntoView({ behavior:'smooth', block:'nearest' });
-        const closeButtons = modal.querySelectorAll('[data-close]');
-        closeButtons.forEach(btn => btn.addEventListener('click', closeModal));
-
-        // Cerrar con Escape
-        function onKey(e){ if (e.key === 'Escape') closeModal(); }
-        document.addEventListener('keydown', onKey);
-
-        function closeModal(){
-          modal.classList.remove('open');
-          modal.setAttribute('aria-hidden', 'true');
-          document.removeEventListener('keydown', onKey);
-        }
       }
     });
   </script>
