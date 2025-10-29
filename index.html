@@ -18,7 +18,7 @@
   <!-- ====== Header / Nav ====== -->
   <header>
     <div class="container nav">
-      <a href="#inicio" class="brand" aria-label="Inicio - Aromanía">
+  <a href="index.html" class="brand" aria-label="Inicio - Aromanía">
         <svg viewBox="0 0 64 64" aria-hidden="true" role="img">
           <defs>
             <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
@@ -36,13 +36,16 @@
         </svg>
         <span>Aromanía</span>
       </a>
+      <!-- Botón hamburguesa móvil -->
+      <button id="mobileToggle" class="mobile-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">
+        ☰
+      </button>
       <nav class="menu" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a>
-        <a href="#nosotros">Nosotros</a>
-        <a href="#productos">Productos</a>
-        <!-- ✅ Nuevo link de promociones -->
+  <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="productos.html">Productos</a>
         <a href="promociones.html">Promociones</a>
-        <a href="#contacto">Contacto</a>
+        <a href="contacto.html">Contacto</a>
       </nav>
     </div>
   </header>
@@ -56,150 +59,51 @@
           <p class="lead">Un local chiquito pero <em>muy</em> atractivo, especializado en <strong>aromas</strong>, <strong>decoración</strong> y <strong>regalitos</strong> que despiertan los sentidos. En la galería destacamos por los <em>colores</em>, los <em>olores</em> y la <em>buena onda</em>. Pasá a conocernos o hacé tu pedido por WhatsApp.</p>
           <p class="quote">“Respirá profundo, soltá el día: la armonía está en los detalles.”</p>
           <div class="cta">
-            <a class="btn btn-primary" href="#productos">Ver productos</a>
-            <a class="btn btn-ghost" href="#contacto">Cómo llegar</a>
+            <a class="btn btn-primary" href="productos.html">Ver productos</a>
+            <a class="btn btn-ghost" href="contacto.html">Cómo llegar</a>
           </div>
           <div class="badge">Abierto Lun–Sáb • 10 a 20 hs</div>
         </div>
       </div>
     </section>
-
-    <!-- ====== Nosotros ====== -->
-    <section id="nosotros" class="section">
-      <div class="container">
-        <div class="grid-2">
-          <div>
-            <span class="eyebrow">Nosotros</span>
-            <h2 class="title title-lg" style="margin-top:.4rem;">Hecho con calma, curado con amor</h2>
-            <p class="lead" style="margin-top:.6rem;">Desde 2021, <strong>Aromanía</strong> es ese rincón que invita a bajar un cambio: velas y difusores seleccionados, sahumerios con buenos porta-sahumerios, aceites esenciales de calidad y pequeños detalles de deco. Nos mueve la <em>curaduría</em>, los <em>aromas limpios</em> y el <em>buen precio</em>.</p>
-            <ul class="list" style="margin-top:1rem;">
-              <li>✔ Atención cercana y recomendaciones honestas</li>
-              <li>✔ Stock rotativo con novedades semanales</li>
-              <li>✔ Retiro en el acto dentro de la galería</li>
-            </ul>
-          </div>
-          <div class="card">
-            <img src="img/inicio.jpg" alt="Detalle de productos de aromaterapia y deco" class="media"/>
-            <div class="body">
-              <h3>Nuestra esencia</h3>
-              <p>Somos un equipo chico y detallista. Probamos cada aroma y elegimos proveedores con foco en calidad. Queremos que cada visita te deje un <em>mood</em> mejor que cuando llegaste.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== Productos ====== -->
-    <section id="productos" class="hero section" aria-labelledby="t-prod">
-      <div class="container">
-        <span class="eyebrow">Catálogo</span>
-        <h2 id="t-prod" class="title title-lg" style="margin-top:.4rem;">Productos destacados</h2>
-        <p class="lead" style="margin-top:.4rem;">Actualizamos el stock cada semana. Algunos imperdibles:</p>
-
-        <div class="cards" style="margin-top:1rem;">
-          <article class="card">
-            <img src="img/velas.jpg" alt="Velas" class="media"/>
-            <div class="body">
-              <h3>Velas aromáticas artesanales</h3>
-              <p>Cera de soja/mixta, mecha de algodón y fragancias equilibradas...</p>
-              <p><strong>Precio:</strong> $9.800</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/sahumerios.jpg" alt="Sahumerios" class="media"/>
-            <div class="body">
-              <h3>Sahumerios</h3>
-              <p>Varitas y conos de diferentes notas (sándalo, palo santo, jazmín)...</p>
-              <p><strong>Precio:</strong> $4.200</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/difusor.jpg" alt="Difusores" class="media"/>
-            <div class="body">
-              <h3>Difusores de ambientes</h3>
-              <p>Con varillas de rattan o eléctricos ultrasónicos...</p>
-              <p><strong>Precio:</strong> $12.900</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/aceite.jpg" alt="Aceites" class="media"/>
-            <div class="body">
-              <h3>Aceites esenciales</h3>
-              <p>Notas puras para difusores o mezclas de masaje...</p>
-              <p><strong>Precio:</strong> $10.500</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/sales.jpg" alt="Sales" class="media"/>
-            <div class="body">
-              <h3>Jabones naturales</h3>
-              <p>Fórmulas suaves con aceites vegetales y exfoliantes...</p>
-              <p><strong>Precio:</strong> $5.800</p>
-            </div>
-          </article>
-
-          <article class="card">
-            <img src="img/regalo.jpg" alt="Kits de regalo" class="media"/>
-            <div class="body">
-              <h3>Mini kits de regalo</h3>
-              <p>Combos listos para sorprender: vela + sahumerios, difusor + aceite...</p>
-              <p><strong>Precio:</strong> $16.900</p>
-            </div>
-          </article>
-        </div>
-
-        <!-- ✅ Nuevo botón de promociones -->
-        <div style="text-align:center; margin-top:2rem;">
-          <a href="promociones.html" class="btn btn-primary" style="font-size:1.1rem; padding:1rem 2rem;">
-            🎁 Conocé nuestras promociones
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ====== Contacto ====== -->
-    <section id="contacto" class="section" aria-labelledby="t-contacto">
-      <div class="container">
-        <span class="eyebrow">Ubicación y contacto</span>
-        <h2 id="t-contacto" class="title title-lg" style="margin-top:.4rem;">Encontranos en Galerías Pacífico</h2>
-
-        <div class="contact" style="margin-top:1rem;">
-          <div class="panel">
-            <h3 class="title" style="font-size:1.2rem;">Datos</h3>
-            <ul class="list">
-              <li><strong>Dirección:</strong> Av. Córdoba 550, C1054, CABA (Galerías Pacífico)</li>
-              <li><strong>Horario:</strong> Lun–Sáb 10 a 20 hs</li>
-              <li><strong>Mail:</strong> <a href="mailto:hola@aromania.com">hola@aromania.com</a></li>
-              <li><strong>Instagram:</strong> <a href="#">@aromania.galeria</a></li>
-              <li><strong>Facebook:</strong> <a href="#">/aromania</a></li>
-            </ul>
-            <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
-              <a class="btn btn-primary" href="javascript:void(0)">WhatsApp</a>
-              <a class="btn btn-ghost" href="#productos">Ver catálogo</a>
-            </div>
-          </div>
-
-          <div class="map">
-            <iframe src="https://www.google.com/maps?q=Galer%C3%ADas%20Pac%C3%ADfico%2C%20Av.%20C%C3%B3rdoba%20550%2C%20C1054%20CABA&output=embed" allowfullscreen loading="lazy"></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Note: index intentionally contains only the INICIO (hero) content. Other sections were moved to separate pages. -->
   </main>
 
   <footer>
     <div class="container foot">
       <p>© <span id="year"></span> Aromanía · Galerías Pacífico</p>
-      <p><a href="#inicio">Volver arriba ↑</a></p>
+      <p><a href="index.html">Volver arriba ↑</a></p>
     </div>
   </footer>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    // Toggle menú móvil (compartible entre páginas)
+    (function(){
+      const btn = document.getElementById('mobileToggle');
+      const menu = document.querySelector('nav.menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', ()=>{
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      // Cerrar al hacer click en un enlace
+      menu.addEventListener('click', (e)=>{
+        if (e.target.tagName === 'A' && menu.classList.contains('open')){
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+      });
+      // Cerrar al redimensionar a escritorio
+      window.addEventListener('resize', ()=>{
+        if (window.innerWidth > 700 && menu.classList.contains('open')){
+          menu.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+        }
+      });
+    })();
   </script>
 </body>
 </html>

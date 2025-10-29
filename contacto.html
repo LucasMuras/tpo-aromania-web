@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto · Aromanía</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Inicio - Aromanía">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#f59e0b"/>
+          </linearGradient></defs>
+          <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#g)"/>
+        </svg>
+        <span>Aromanía</span>
+      </a>
+      <button id="mobileToggle" class="mobile-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">☰</button>
+      <nav class="menu" aria-label="Navegación principal">
+  <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="productos.html">Productos</a>
+        <a href="promociones.html">Promociones</a>
+        <a href="contacto.html">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow">Ubicación</span>
+  <h2 class="title title-lg mt-0-5">Contactanos</h2>
+  <p class="lead mt-0-4">Podés escribirnos por mail o visitarnos en Galerías Pacífico.</p>
+
+  <div class="contact mt-1">
+          <div class="panel">
+            <h3 class="title">Datos</h3>
+            <ul class="list">
+              <li><strong>Dirección:</strong> Av. Córdoba 550, CABA</li>
+              <li><strong>Horario:</strong> Lun–Sáb 10 a 20 hs</li>
+              <li><strong>Email:</strong> <a href="mailto:hola@aromania.com">hola@aromania.com</a></li>
+            </ul>
+          </div>
+          <div class="map">
+            <iframe src="https://www.google.com/maps?q=Galer%C3%ADas%20Pac%C3%ADfico%2C%20Av.%20C%C3%B3rdoba%20550%2C%20C1054%20CABA&output=embed" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container foot">
+      <p>© <span id="year"></span> Aromanía · Galerías Pacífico</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function(){
+      const btn = document.getElementById('mobileToggle');
+      const menu = document.querySelector('nav.menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', ()=>{
+        const open = menu.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open);
+      });
+      menu.addEventListener('click', (e)=>{
+        if (e.target.tagName === 'A' && menu.classList.contains('open')){
+          menu.classList.remove('open'); btn.setAttribute('aria-expanded','false');
+        }
+      });
+      window.addEventListener('resize', ()=>{ if (window.innerWidth > 700 && menu.classList.contains('open')){ menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); } });
+    })();
+  </script>
+</body>
+</html>

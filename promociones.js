@@ -186,27 +186,25 @@ document.addEventListener("DOMContentLoaded", function () {
   // ==========================
   function mostrarResultados(resultado, productos) {
     resultadosDiv.innerHTML = `
-      <h3 class="title" style="font-size:1.3rem; margin-bottom:.8rem;">🧾 Resumen de tu compra</h3>
+      <h3 class="title title-modal">🧾 Resumen de tu compra</h3>
 
-      <div style="text-align:left; margin-bottom:1rem;">
+      <div class="result-details">
         ${productos
           .map(
             (p) =>
-              `<p style="margin:.2rem 0;">• ${p.nombre} x${p.cantidad} — $${formatearPrecio(
+              `<p class="result-line">• ${p.nombre} x${p.cantidad} — $${formatearPrecio(
                 p.precio * p.cantidad
               )}</p>`
           )
           .join("")}
       </div>
 
-      <hr style="border:1px solid rgba(255,255,255,.1); margin:1rem 0;">
+      <div class="hr--muted"></div>
       <p><strong>Subtotal sin descuento:</strong> $${formatearPrecio(resultado.subtotal)}</p>
       <p><strong>Descuento aplicado:</strong> -$${formatearPrecio(resultado.descuento)}</p>
-      <p style="font-size:1.2rem; margin-top:.5rem;"><strong>Total a pagar:</strong> $${formatearPrecio(resultado.total)}</p>
+      <p class="result-total"><strong>Total a pagar:</strong> $${formatearPrecio(resultado.total)}</p>
 
-      <p style="margin-top:1rem; background:#183d2e; display:inline-block; padding:.6rem 1rem; border-radius:8px; color:#b9f6ca;">
-        ${resultado.mensaje}
-      </p>
+      <p class="promo-message">${resultado.mensaje}</p>
     `;
 
     resultadosDiv.style.display = "block";
