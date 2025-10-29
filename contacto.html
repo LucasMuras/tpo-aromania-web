@@ -4,24 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contacto · Aromanía</title>
+  <!-- Tipografías Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <header>
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="Inicio - Aromanía">
-        <svg viewBox="0 0 64 64" aria-hidden="true">
-          <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stop-color="#1e88e5"/><stop offset="100%" stop-color="#f59e0b"/>
-          </linearGradient></defs>
+        <svg viewBox="0 0 64 64" aria-hidden="true" role="img">
+          <defs>
+            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#1e88e5"/>
+              <stop offset="100%" stop-color="#f59e0b"/>
+            </linearGradient>
+          </defs>
           <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#g)"/>
+          <path d="M32 16 C36 22,36 30,32 36 C28 30,28 22,32 16 Z" fill="#0b1220"/>
+          <path d="M22 24 C26 24,28 28,29 33 C24 32,21 29,22 24 Z" fill="#0b1220"/>
+          <path d="M42 24 C38 24,36 28,35 33 C40 32,43 29,42 24 Z" fill="#0b1220"/>
+          <path d="M26 36 C24 33,26 30,30 30 C29 33,28 35,26 36 Z" fill="#0b1220"/>
+          <path d="M38 36 C40 33,38 30,34 30 C35 33,36 35,38 36 Z" fill="#0b1220"/>
+          <path d="M20 40 C28 38,36 38,44 40 C36 42,28 42,20 40 Z" fill="#0b1220"/>
         </svg>
         <span>Aromanía</span>
       </a>
-      <button id="mobileToggle" class="mobile-toggle" aria-controls="navMenu" aria-expanded="false" aria-label="Abrir menú">☰</button>
       <nav class="menu" aria-label="Navegación principal">
-  <a href="index.html">Inicio</a>
+        <a href="index.html">Inicio</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="productos.html">Productos</a>
         <a href="promociones.html">Promociones</a>
@@ -31,26 +43,32 @@
   </header>
 
   <main>
-    <section class="section">
+    <!-- ====== Contacto (copiado de index.html) ====== -->
+    <section id="contacto" class="section" aria-labelledby="t-contacto">
       <div class="container">
-        <span class="eyebrow">Ubicación</span>
-  <h2 class="title title-lg mt-0-5">Contactanos</h2>
-  <p class="lead mt-0-4">Podés escribirnos por mail o visitarnos en Galerías Pacífico.</p>
+        <span class="eyebrow">Ubicación y contacto</span>
+        <h2 id="t-contacto" class="title title-lg" style="margin-top:.4rem;">Encontranos en Galerías Pacífico</h2>
 
-  <div class="contact mt-1">
+        <div class="contact" style="margin-top:1rem;">
           <div class="panel">
-            <h3 class="title">Datos</h3>
+            <h3 class="title" style="font-size:1.2rem;">Datos</h3>
             <ul class="list">
-              <li><strong>Dirección:</strong> Av. Córdoba 550, CABA</li>
+              <li><strong>Dirección:</strong> Av. Córdoba 550, C1054, CABA (Galerías Pacífico)</li>
               <li><strong>Horario:</strong> Lun–Sáb 10 a 20 hs</li>
-              <li><strong>Email:</strong> <a href="mailto:hola@aromania.com">hola@aromania.com</a></li>
+              <li><strong>Mail:</strong> <a href="mailto:hola@aromania.com">hola@aromania.com</a></li>
+              <li><strong>Instagram:</strong> <a href="#">@aromania.galeria</a></li>
+              <li><strong>Facebook:</strong> <a href="#">/aromania</a></li>
             </ul>
+            <div style="margin-top:1rem; display:flex; gap:.6rem; flex-wrap:wrap;">
+              <a class="btn btn-primary" href="javascript:void(0)">WhatsApp</a>
+              <a class="btn btn-ghost" href="productos.html">Ver catálogo</a>
+            </div>
           </div>
+
           <div class="map">
             <iframe src="https://www.google.com/maps?q=Galer%C3%ADas%20Pac%C3%ADfico%2C%20Av.%20C%C3%B3rdoba%20550%2C%20C1054%20CABA&output=embed" allowfullscreen loading="lazy"></iframe>
           </div>
         </div>
-
       </div>
     </section>
   </main>
@@ -58,10 +76,14 @@
   <footer>
     <div class="container foot">
       <p>© <span id="year"></span> Aromanía · Galerías Pacífico</p>
+      <p><a href="contacto.html">Volver arriba ↑</a></p>
     </div>
   </footer>
 
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
   <script>
     (function(){
       const btn = document.getElementById('mobileToggle');
