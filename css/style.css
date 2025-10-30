@@ -15,6 +15,7 @@
   --radius: 16px;        /* Border radius global */
   --shadow: 0 10px 25px rgba(0,0,0,.25);
   --container: 1100px;   /* Ancho máximo */
+  --footer-height: 68px; /* Altura esperada del footer para layout en móvil */
 }
 
 html{scroll-behavior:smooth;}
@@ -297,6 +298,23 @@ header{ position: sticky; top: 0; z-index: 50; backdrop-filter: blur(8px); backg
 footer{ border-top:1px solid rgba(255,255,255,.06); background:#0a0f1e; }
 .foot{ display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:1rem; padding:1.2rem 0; color:#94a3b8; font-size:.95rem; }
 
+/* Footer visible en móviles: fijarlo al fondo y reservar espacio para que no cubra contenido */
+@media (max-width: 700px) {
+  footer{
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 40;
+    border-top: 1px solid rgba(255,255,255,.06);
+  }
+  /* Centrar contenido y usar menos espacio horizontal */
+  .foot{ justify-content: center; padding: .8rem 1rem; gap:.6rem; }
+  /* Evitar que el contenido de la página quede oculto bajo el footer */
+  body{ padding-bottom: calc(var(--footer-height) + 12px); }
+}
+
 /* ====== Responsivo ====== */
 @media (max-width: 900px){
   .hero .wrap{ flex-direction: column; justify-content:center; text-align:center; }
@@ -304,5 +322,23 @@ footer{ border-top:1px solid rgba(255,255,255,.06); background:#0a0f1e; }
 }
 
 @media (max-width: 700px){
-  .menu{ display:none; } /* Menú simple en móvil */
+  .menu{ display:none; } /* Menú simple en móvil (se muestra cuando tenga la clase .open) */
+  /* Botón móvil (hamburger) */
+  .mobile-toggle{ display:inline-flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--muted); font-size:1.25rem; padding:.35rem .6rem; border-radius:8px; cursor:pointer; }
+  .mobile-toggle:focus{ outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  /* Menú abierto (estilo panel móvil) */
+  .menu.open{
+    display:flex;
+    flex-direction:column;
+    position: fixed;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background: rgba(10,15,30,.98);
+    padding: 1rem;
+    gap: .6rem;
+    z-index: 45;
+  }
+  .menu.open a{ padding:.8rem 1rem; border-radius:8px; color:var(--muted); background:transparent; }
 }
